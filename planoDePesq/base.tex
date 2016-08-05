@@ -1,0 +1,59 @@
+\documentclass[a4paper, 12pt]{abntex2}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage[space]{grffile}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{float}
+\usepackage{mathtools,mathrsfs}
+%\usepackage[nottoc]{tocbibind} %make tableofcontents
+\usepackage{titlesec}
+\usepackage{subcaption}
+\usepackage{xcolor,colortbl}
+\usepackage{makecell}
+\usepackage{cite}
+\usepackage{bibentry}
+\nobibliography*
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\selectlanguage{brazil}
+\makeindex
+
+\instituicao{%
+Universidade de São Paulo - Escola Politécnica
+\par
+Projeto de Pesquisa para Mestrado}
+
+\titulo{Estudo de sinais mecânico-elétricos cardíacos}
+\autor{Bernardo Mascarenhas Camargos e Silva}
+\orientador{Sérgio Shiguemi Furuie}
+\data{\today}
+%Tira a pagina extra em branco
+\openany
+\begin{document}
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+    \imprimirfolhaderosto
+
+    \tableofcontents*
+    \newpage
+    
+    \input{intro.tex}
+   \input{obj.tex}
+   \input{met.tex}
+   %\input{sweep.tex}
+    %\input{tr.tex}
+    %\input{solucaoInversa.tex}
+    %\input{sim.tex}
+    %\input{simIH.tex}
+    \bibliography{b}{}
+    \bibliographystyle{plain}
+%Projeto de pesquisa de Mestrado realizado pelo aluno Bernardo Mascarenhas Camargos e Silva com orientação do professor Sérgio Shiguemi Furuie, realizado no dia \today
+%
+%\vspace{21cm}
+%\noindent\begin{tabular}{ll}
+%\\[6ex]
+%\makebox[3in]{\hrulefill} &\hspace{1.5cm} \makebox[9cm][l]{\hrulefill}\\
+%Sérgio Shiguemi Furuie (Orientador)  & \hspace{1.5cm} Bernardo Mascarenhas Camargos e Silva (Aluno)
+%\end{tabular}
+
+\end{document}

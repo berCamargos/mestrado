@@ -1,0 +1,17 @@
+\chapter{Objetivo}
+
+    O objetivo desse trabalho é pesquisar técnicas de sensoriamento cardíaco utilizando uma combinação de dados de diferentes sensores para obter informações sobre o ciclo cardíaco de maneira contínua e confiável, tentando inicialmente replicar a confiabilidade do ECG e depois expandir, tentando obter dados mais relevantes sobre o estado do ciclo cardíaco.
+
+    Como discutido na sessão anterior o sismeocardiograma está sendo fortemente estudado, devido à melhoria das tecnologias de acelerômetros e microcontroladores, mas geralmente os dados desse sensor são estudados independente do seu significado físico, sendo observados somente como um sinal elétrico. 
+    
+    Grande parte das pesquisas leva em consideração somente os dados de um dos eixos de um acelerômetro triaxial, considerando que esse representa a direção dorso-ventral, que deveria onde os movimentos mais relevantes se encontram, mas esse uso simplificado falha em desconsiderar as possíveis variações na direção do acelerômetro. 
+    
+   Essas variações podem ser resultantes da posição inicial do sensor, que devido a superfície não uniforme da região torácica poderia não estar na direção correta, ou causadas pela variação da direção decorrente do movimento, que, por ser de natureza vibratória, tende a causar alterações na direção do acelerômetro, torando necessário uma correção dessa. %Talvez citar o trabalho de respiração aqui e preciso confirmar esse rolê da vibração
+
+    Mesmo considerando que a posição inicial seja definida com cuidado e que as mudanças de direção não sejam suficientes para gerar uma variação nos dados, a utilização de somente um dos eixos de movimento, ou a utilização dos três independentemente, como é feita em alguns trabalhos, falha em observar o dado pelo que ele é originalmente, e portanto tende a perder informações significativas que podem aparecer ao se levar em consideração que esse dado vem de uma movimentação física de uma sensor com massa e dimensões conhecidas. 
+
+    Portanto proponho utilizar um sensor completo de posicionamento para realizar um seismeocardiograma, analisando a variação de posição do sensor colocado sobre a região torácica ao longo do tempo. Esse sensor seria composto de um acelerômetro, um giroscópio e um magnetômetro, todos triaxiais, e estaria ligado a um microcontrolador, que seria responsável por continuamente ler e armazenar esses dados. 
+
+    Os dados desse sensor serão combinados com o objetivo de gerar uma visão mais completa do movimento cardíaco, tentando reduzir as incertezas e variações apresentadas pelo seismeocardiograma padrão. Essa combinação será feita por algoritmos de filtragem adaptativa como filtros de Kalman e outros, que levam em consideração as origens físicas de cada sensor para obter a posição, mas também por análises matemática, que comparam os dados com um objetivo, por exemplo batimentos cardíacos, e realizam análises iterativa para se localizarem funções que combinam os dados para atingir o objetivo.
+
+    Serão estudados diversas posições para esse sistema, tentando obter informações sobre o movimento cardíaco, colocando sobre a região torácica, informações sobre pressão arterial, colocando sobre artérias próximas a superfície, e algumas outras com o objetivo de obter o maior número de informações complementares sobre o ciclo cardíaco.
